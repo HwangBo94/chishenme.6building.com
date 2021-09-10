@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>BITCQIC点餐系统</title>
+
+<style type="text/css">
+
+body{ background: #3a4954}
+#tagbox{position:relative;margin:20px auto 0px;width:600px;height:500px;background:#3a4954;}
+#tagbox a{position:absolute;padding:3px 6px;font-family:Microsoft YaHei;color:#fff;TOP:0px;font-weight:bold;text-decoration:none;left:0px}
+#tagbox a:hover{border:#eee 1px solid;background:#000;}
+#tagbox .blue{color:blue}
+#tagbox .red{color:red}
+#tagbox .yellow{color:yellow}
+
+
+.container {  
+    position:relative;  
+    display:inline-block;  
+    *display:inline;  
+    *zoom:1;  
+}  
+.selfAdapta {  
+    width:auto;  
+}  
+input,span{  
+    font-family:verdana,Arial,Helvetica,sans-serif;  
+    font-size: 12px;  
+}  
+
+</style>
+
+</head>
+<body>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+<div id="tagbox">
+	<a href="#">香辣虾</a> 
+	<a class="red" href="#">特色毛血旺</a> 
+	<a href="#">荤豆花</a> 
+	<a href="#">酸菜鱼</a> 
+	<a class="blue" href="#">水煮鱼</a> 
+	<a href="#">火爆肥肠</a> 
+	<a class="red" href="#">水煮猪手</a> 
+	<a class="yellow" href="#">飘香龙利鱼</a> 
+	<a href="#">香辣猪手</a> 
+	<a class="red" href="#">水煮牛肉</a> 
+	<a href="#">白灼虾</a> 
+	<a class="blue" href="#">水煮肉片</a> 
+	<a class="blue" href="#">酸菜龙利鱼</a>
+	<a class="red" href="#">深井白切鸡</a> 
+	<a class="yellow" href="#">开心凉粉</a>
+	<a class="yellow" href="#">红油猪耳朵</a> 
+	<a class="blue" href="#">烧椒皮蛋</a>
+	<a class="yellow" href="#">老卤猪拱嘴</a>
+	<a class="blue" href="#">凉拌空心菜</a> 
+	<a class="blue" href="#">青椒皮蛋</a> 
+	<a class="red" href="#">油酥花生米</a> 
+	<a href="#">蒜泥黄瓜</a> 
+	<a href="#">小炒黄牛肉</a> 
+	<a class="yellow" href="#">鱼香肉丝</a> 
+	<a href="#">油渣莲白</a> 
+	<a href="#">泡椒牛肉丝</a> 
+	<a class="blue" href="#">豆干肉丝</a> 
+	<a class="red" href="#">青椒玉米</a> 
+	<a class="red" href="#">葱香牛肉</a> 
+	<a class="blue" href="#">木耳肉丝</a> 
+	<a href="#">肉沫茄子</a> 
+	<a class="blue" href="#">尖椒拱嘴</a> 
+	<a class="blue" href="#">榨菜肉丝</a> 
+	<a href="#">黄瓜炒蛋</a> 
+	<a href="#">蒜香腊肉</a> 
+	<a href="#">胡萝卜肉片</a> 
+	<a ref="#">青椒炒蛋</a> 
+	<a href="#">姜爆鸭</a> 
+	<a href="#">泡椒肉丝</a> 
+	<a class="red" href="#">虹豆茄条</a> 
+	<a class="yellow" href="#">特色水滑肉</a> 
+	<a class="yellow" href="#">三鲜汤</a> 
+	<a class="yellow" href="#">黄瓜皮蛋汤</a> 
+	
+	<a href="#">西红柿蛋汤</a> 
+	<a class="red" href="#">啤酒鸭</a> 
+	<a href="#">土豆肉丝</a> 
+	<a href="#">白油豆腐</a> 
+	<a class="blue" href="#">仔姜肉丝</a> 
+	<a href="#">芹菜肉丝</a> 
+	<a class="red" href="#">干煸四季豆</a> 
+	<a class="yellow" href="#">宫保鸡丁</a> 
+	<a href="#">青椒肉丝</a> 
+	<a class="red" href="#">麻婆豆腐</a> 
+	<a href="#">泡椒鸡杂</a> 
+	<a class="blue" href="#">洋葱肉丝</a> 
+	<a class="blue" href="#">肉沫虹豆</a>
+	<a class="red" href="#">红袍鸡柳</a> 
+	<a class="yellow" href="#">黄瓜肉片</a>
+	<a class="yellow" href="#">泡椒血旺</a> 
+	<a class="blue" href="#">回锅肉</a>
+	<a class="yellow" href="#">洋葱肉片</a>
+	<a class="blue" href="#">芹菜豆干</a> 
+	<a class="blue" href="#">长沙小炒肉</a> 
+	<a class="red" href="#">木耳肉片</a> 
+	<a href="#">虎皮青椒</a> 
+	<a href="#">泡椒猪肝</a> 
+	<a class="yellow" href="#">青椒肉片</a> 
+	<a href="#">炒丝瓜</a> 
+	<a href="#">莲白回锅肉</a> 
+	<a class="blue" href="#">洋葱炒蛋</a> 
+	<a class="red" href="#">青椒土豆丝</a> 
+	<a class="red" href="#">尖椒小炒肉</a> 
+	<a class="blue" href="#">鱼香茄子</a> 
+	<a href="#">酸辣土豆丝</a> 
+	<a class="blue" href="#">盐煎肉</a> 
+	<a class="blue" href="#">韭菜炒蛋</a> 
+	<a href="#">炒嫩胡豆</a> 
+	<a href="#">蒜苔肉丝</a> 
+	<a href="#">西红柿炒蛋</a> 
+	<a ref="#">时蔬</a> 
+	<a href="#">紫菜蛋花汤</a> 
+	<a href="#">酸菜粉丝</a> 
+	<a class="red" href="#">小菜豆腐汤</a>
+</div>
+<div style="text-align:center; padding-top:30px;">
+
+
+    <tr><input type="button" style="font-size: 50px; text-align:center;" id="button" value="中午吃什么！！！" onclick="Calc()" /></tr>
+	<p type="text" style="font-size: 50px; text-align:center;color:red" id="Text" class="selfAdapta">None</p>
+	<br>
+	<br>
+	<p type="text" style="font-size: 20px; text-align:center;color:blanchedalmond" id="Text" class="selfAdapta">北京理工大学重庆创新中心午餐菜单选择专用网站，菜单由张玲珺提供！</p>
+
+        <script type="text/javascript">
+        //var clas=['馄饨','拉面','热干面','刀削面','油泼面','炸酱面','炒面','重庆小面',
+        // '米线', '酸辣粉', '土豆粉', '螺狮粉', '凉皮儿', '麻辣烫' ,'肉夹馍', '羊肉汤',
+        // '炒饭', '盖浇饭', '卤肉饭', '烤肉饭', '黄焖鸡米饭', '驴肉火烧', '川菜', '麻辣香锅',
+        // '火锅', '酸菜鱼', '烤串', '披萨', '烤鸭', '汉堡', '炸鸡', '寿司', '蟹黄包', '煎饼果子', '生煎', '炒年糕',
+        // '不吃','学校食堂','桂花糕','虾饺','二锅头','泡面','粥'];
+
+        var clas=['香辣虾', '特色毛血旺', '荤豆花', '酸菜鱼', '水煮鱼', '火爆肥肠', '水煮猪手', '飘香龙利鱼', '香辣猪手',
+		 '水煮牛肉', '白灼虾', '水煮肉片', '酸菜龙利鱼', '深井白切鸡', '开心凉粉', '红油猪耳朵', '烧椒皮蛋', '老卤猪拱嘴',
+		  '凉拌空心菜', '青椒皮蛋', '油酥花生米', '蒜泥黄瓜', '小炒黄牛肉 ', '鱼香肉丝 ', '油渣莲白', '泡椒牛肉丝', '豆干肉丝',
+		   '青椒玉米', '葱香牛肉', '木耳肉丝', '肉沫茄子', '尖椒拱嘴', '榨菜肉丝', '黄瓜炒蛋', '蒜香腊肉', '胡萝卜肉片', '青椒炒蛋',
+		    '姜爆鸭', '泡椒肉丝', '虹豆茄条', '啤酒鸭', '土豆肉丝 ', '白油豆腐', '仔姜肉丝', '芹菜肉丝', '干煸四季豆', '宫保鸡丁',
+			 '青椒肉丝', '麻婆豆腐', '泡椒鸡杂', '洋葱肉丝', '肉沫虹豆', '红袍鸡柳', '黄瓜肉片', '泡椒血旺', '回锅肉', '洋葱肉片', '芹菜豆干',
+			  '长沙小炒肉', '木耳肉片', '虎皮青椒', '泡椒猪肝', '青椒肉片', '炒丝瓜', '莲白回锅肉', '洋葱炒蛋', '青椒土豆丝', '尖椒小炒肉', '鱼香茄子',
+			   '酸辣土豆丝', '盐煎肉', '韭菜炒蛋', '炒嫩胡豆', '蒜苔肉丝', '西红柿炒蛋', '时蔬', '紫菜蛋花汤', '酸菜粉丝', '小菜豆腐汤', '特色水滑肉',
+			    '三鲜汤', '黄瓜皮蛋汤', '西红柿蛋汤']
+		 var countnum=0;
+
+		 (function(){
+			window.alert = function(name){
+			var iframe = document.createElement("IFRAME");
+			iframe.style.display="none";
+			iframe.setAttribute("src", 'data:text/plain');
+			document.documentElement.appendChild(iframe);
+			window.frames[0].window.alert(name);
+			iframe.parentNode.removeChild(iframe);
+			}
+			})();
+
+	    
+        function Calc() {
+
+			if (countnum<8)
+			{
+				var selectednum=clas.length;
+				var x=Math.floor(Math.random()*(selectednum));
+
+				document.getElementById("Text").innerHTML = clas[x];
+				countnum=countnum+1;
+			}
+			else
+			{
+				alert("这么作？今天别吃了!");
+			}
+
+			if (countnum==1)
+			{
+				document.getElementById("button").value="不行，换一个"
+			}
+            
+        }
+        </script>
+</div>
+</body>
+</html>
+
