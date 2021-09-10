@@ -143,17 +143,21 @@ input,span{
 		
 		var details=['桃园煲仔饭-魏公村店','小鱼大作.酸菜鱼-中关村店','湘聚辣过瘾木桶饭','张姐烤肉拌饭','湘味浓木桶饭-中关村店','椒麻星球']
 		
-		var clockID;
+		var clockID=self.setInterval("clock()",100);
+
+		var countnum=0;
 		
 		function clock()
 		{
+			if (countnum%2==1)
+			{
 				var selectednum=clas.length;
 				var x=Math.floor(Math.random()*(selectednum));
 
 				document.getElementById("Text").innerHTML = clas[x];
+			}	
 		}
 
-		 var countnum=0;
 
 		 (function(){
 			window.alert = function(name){
@@ -173,17 +177,17 @@ input,span{
 
 			if (countnum>18)
 			{
+				window.clearInterval(clockID)
 				alert("这么作？今天别吃了!");
 			}
 			else if (countnum%2==1)
 			{
 				document.getElementById("button").value="停止";
-				clockID=self.setInterval("clock()",100);
 			}
 			else
 			{
+				
 				document.getElementById("button").value="不行，换一个";
-				window.clearInterval(clockID)
 			}
             
         }
