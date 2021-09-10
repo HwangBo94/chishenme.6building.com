@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>BITCQIC点餐系统</title>
+<title>拯救吃饭选择困难症患者</title>
 
 <style type="text/css">
 
@@ -129,7 +129,7 @@ input,span{
 	<p type="text" style="font-size: 50px; text-align:center;color:red" id="Text" class="selfAdapta">None</p>
 	<br>
 	<br>
-	<p type="text" style="font-size: 20px; text-align:center;color:blanchedalmond" id="Text" class="selfAdapta">北京理工大学重庆创新中心午餐菜单选择专用网站，菜单由张玲珺提供！</p>
+	<p type="text" style="font-size: 20px; text-align:center;color:blanchedalmond" id="Text" class="selfAdapta">北京理工大学六号楼专用，菜单由徐畅、樊阿馨、陈毅文、汪韵承提供！</p>
 
         <script type="text/javascript">
         //var clas=['馄饨','拉面','热干面','刀削面','油泼面','炸酱面','炒面','重庆小面',
@@ -138,15 +138,20 @@ input,span{
         // '火锅', '酸菜鱼', '烤串', '披萨', '烤鸭', '汉堡', '炸鸡', '寿司', '蟹黄包', '煎饼果子', '生煎', '炒年糕',
         // '不吃','学校食堂','桂花糕','虾饺','二锅头','泡面','粥'];
 
-        var clas=['香辣虾', '特色毛血旺', '荤豆花', '酸菜鱼', '水煮鱼', '火爆肥肠', '水煮猪手', '飘香龙利鱼', '香辣猪手',
-		 '水煮牛肉', '白灼虾', '水煮肉片', '酸菜龙利鱼', '深井白切鸡', '开心凉粉', '红油猪耳朵', '烧椒皮蛋', '老卤猪拱嘴',
-		  '凉拌空心菜', '青椒皮蛋', '油酥花生米', '蒜泥黄瓜', '小炒黄牛肉 ', '鱼香肉丝 ', '油渣莲白', '泡椒牛肉丝', '豆干肉丝',
-		   '青椒玉米', '葱香牛肉', '木耳肉丝', '肉沫茄子', '尖椒拱嘴', '榨菜肉丝', '黄瓜炒蛋', '蒜香腊肉', '胡萝卜肉片', '青椒炒蛋',
-		    '姜爆鸭', '泡椒肉丝', '虹豆茄条', '啤酒鸭', '土豆肉丝 ', '白油豆腐', '仔姜肉丝', '芹菜肉丝', '干煸四季豆', '宫保鸡丁',
-			 '青椒肉丝', '麻婆豆腐', '泡椒鸡杂', '洋葱肉丝', '肉沫虹豆', '红袍鸡柳', '黄瓜肉片', '泡椒血旺', '回锅肉', '洋葱肉片', '芹菜豆干',
-			  '长沙小炒肉', '木耳肉片', '虎皮青椒', '泡椒猪肝', '青椒肉片', '炒丝瓜', '莲白回锅肉', '洋葱炒蛋', '青椒土豆丝', '尖椒小炒肉', '鱼香茄子',
-			   '酸辣土豆丝', '盐煎肉', '韭菜炒蛋', '炒嫩胡豆', '蒜苔肉丝', '西红柿炒蛋', '时蔬', '紫菜蛋花汤', '酸菜粉丝', '小菜豆腐汤', '特色水滑肉',
-			    '三鲜汤', '黄瓜皮蛋汤', '西红柿蛋汤']
+        var clas=['香汁排骨煲仔饭+窝蛋', '柠香.青柠酸菜鱼（鱼粉）', '烟笋腊肉+特贡香米饭','烤肉拌饭大+爽口菜','腐竹牛腩饭',
+		'椒麻鸡']
+		
+		var details=['桃园煲仔饭-魏公村店','小鱼大作.酸菜鱼-中关村店','湘聚辣过瘾木桶饭','张姐烤肉拌饭','湘味浓木桶饭-中关村店','椒麻星球']
+
+		
+		function clock()
+		{
+				var selectednum=clas.length;
+				var x=Math.floor(Math.random()*(selectednum));
+
+				document.getElementById("Text").innerHTML = clas[x];
+		}
+
 		 var countnum=0;
 
 		 (function(){
@@ -162,6 +167,10 @@ input,span{
 
 	    
         function Calc() {
+
+			document.getElementById("button").value="停止"
+
+			var int=self.setInterval("clock()",1000);
 
 			if (countnum<8)
 			{
