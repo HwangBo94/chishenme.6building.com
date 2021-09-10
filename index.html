@@ -142,7 +142,8 @@ input,span{
 		'椒麻鸡']
 		
 		var details=['桃园煲仔饭-魏公村店','小鱼大作.酸菜鱼-中关村店','湘聚辣过瘾木桶饭','张姐烤肉拌饭','湘味浓木桶饭-中关村店','椒麻星球']
-
+		
+		var clockID;
 		
 		function clock()
 		{
@@ -177,7 +178,7 @@ input,span{
 			else if (countnum%2==1)
 			{
 				document.getElementById("button").value="停止";
-				var clockID=self.setInterval("clock()",100);
+				clockID=self.setInterval("clock()",100);
 			}
 			else
 			{
