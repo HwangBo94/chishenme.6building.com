@@ -127,6 +127,7 @@ input,span{
 
     <tr><input type="button" style="font-size: 50px; text-align:center;" id="button" value="中午吃什么！！！" onclick="Calc()" /></tr>
 	<p type="text" style="font-size: 50px; text-align:center;color:red" id="Text" class="selfAdapta">None</p>
+	<p type="text" style="font-size: 50px; text-align:center;color:red" id="rest" class="selfAdapta">None</p>
 	<br>
 	<br>
 	<p type="text" style="font-size: 20px; text-align:center;color:blanchedalmond" id="Text" class="selfAdapta">北京理工大学六号楼专用，菜单由徐畅、樊阿馨、陈毅文、汪韵承提供！</p>
@@ -139,22 +140,37 @@ input,span{
         // '不吃','学校食堂','桂花糕','虾饺','二锅头','泡面','粥'];
 
         var clas=['香汁排骨煲仔饭+窝蛋', '柠香.青柠酸菜鱼（鱼粉）', '烟笋腊肉+特贡香米饭','烤肉拌饭大+爽口菜','腐竹牛腩饭',
-		'椒麻鸡']
+		'椒麻鸡','椒麻小酥肉烧土豆豆角焖饭','炸猪排·咖喱蛋包饭','阿香番茄米线','双拼无骨炸鸡','农家小炒肉+香辣茄子鸡','厚切炒酸奶',
+		'麻辣香锅','香辣土豆牛肉饭','泡菜汤饭','流油咸蛋黄饭团','冒菜',
+		'草本汤猪小排面','蟹钳肉寿司、香辣鱿鱼寿司、凤尾虾寿司、鳗之味寿司等','北美虾套餐','招牌肥牛套餐','人气双拼【凉皮+牛筋面】',
+		'现烤肉夹馍','鸡翅煲','鸡爪煲','仔排煲','进士米线','驴肉火烧（普通）',
+		'招牌骨汤牛肉面','阿拉伯烤肉饭','全家福卤粉',' 经典腊汁面皮套餐',' 炸酱热干面','原味酱猪蹄']
 		
-		var details=['桃园煲仔饭-魏公村店','小鱼大作.酸菜鱼-中关村店','湘聚辣过瘾木桶饭','张姐烤肉拌饭','湘味浓木桶饭-中关村店','椒麻星球']
+		var details=['桃园煲仔饭-魏公村店','小鱼大作.酸菜鱼-中关村店','湘聚辣过瘾木桶饭','张姐烤肉拌饭','湘味浓木桶饭-中关村店',
+		'椒麻星球','丈母娘·多肉焖饭','黄饷咖喱蛋包饭','阿香米线','熊家·韩式炸鸡','湘香小厨','冰叔厚切炒酸奶',
+		'青渝蓝之麻辣香锅','笨小炖牛肉饭','金家汤饭','元気饭团','赵小七冒菜',
+		'和府捞面-北京新中关村店','池田寿司-金源店','见味花甲粉-万柳店','见味花甲粉-万柳店','勾魂.爆肚粉.凉皮-知春路店',
+		'勾魂.爆肚粉.凉皮-知春路店','壹只蟹蟹煲饭-人大店','壹只蟹蟹煲饭-人大店','壹只蟹蟹煲饭-人大店','驴肉火烧过桥米线-万寿寺店','驴肉火烧过桥米线-万寿寺店',
+		'西部马华牛肉面-万泉河餐厅','西部马华牛肉面-万泉河餐厅','小蹄大作-中关村店','西少爷肉夹馍-万柳店','RERE热热牛腩热干面','三十六味匠猪蹄']
 		
 		var clockID=self.setInterval("clock()",10);
 
+		var titC='菜名：';
+		var titD='店名：';
+
 		var countnum=0;
+		var selectednum=clas.length;
 		
 		function clock()
 		{
 			if (countnum%2==1)
 			{
-				var selectednum=clas.length;
+				
 				var x=Math.floor(Math.random()*(selectednum));
 
-				document.getElementById("Text").innerHTML = clas[x];
+				document.getElementById("Text").innerHTML = titC+clas[x];
+
+				document.getElementById("rest").innerHTML = titD+details[x];
 			}	
 		}
 
