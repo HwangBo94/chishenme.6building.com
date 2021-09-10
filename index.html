@@ -168,26 +168,21 @@ input,span{
 	    
         function Calc() {
 
-			document.getElementById("button").value="停止"
+			countnum=countnum+1;
 
-			var int=self.setInterval("clock()",1000);
-
-			if (countnum<8)
-			{
-				var selectednum=clas.length;
-				var x=Math.floor(Math.random()*(selectednum));
-
-				document.getElementById("Text").innerHTML = clas[x];
-				countnum=countnum+1;
-			}
-			else
+			if (countnum>18)
 			{
 				alert("这么作？今天别吃了!");
 			}
-
-			if (countnum==1)
+			else if (countnum%2==1)
 			{
-				document.getElementById("button").value="不行，换一个"
+				document.getElementById("button").value="停止";
+				var clockID=self.setInterval("clock()",100);
+			}
+			else
+			{
+				document.getElementById("button").value="不行，换一个";
+				window.clearInterval(clockID)
 			}
             
         }
